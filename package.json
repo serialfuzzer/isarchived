@@ -1,0 +1,19 @@
+{
+  "name": "isarchived",
+  "version": "1.0.0",
+  "description": "take a list of URLs and only output the ones that are archived by wayback machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "serialfuzzer",
+  "license": "ISC",
+  "bin": {
+    "isarchived": "index.js"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "axios": "^1.4.0",
+    "commander": "^11.0.0"
+  }
+}
