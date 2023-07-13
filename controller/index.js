@@ -17,7 +17,7 @@ Controller.prototype = {
         for(let i=0;i<urls.length;i++) {
             try {
                 var url = urls[i];
-                var requestURI = template + url;
+                var requestURI = template + encodeURIComponent(url);
                 var response = await axios.get(requestURI);
                 if(Object.keys(response.data.archived_snapshots).length > 0){
                     archivedDomains.push(url);
