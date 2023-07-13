@@ -18,7 +18,7 @@ if(!isStdinEmpty){
 
 
 cli
-.description("From a list of subdomains find dead ones")
+.description("From a list of subdomains find arhived ones")
 .option("-f, --file <value>", "File to import targets from", "")
 .option("-d, --domain <value>", "Domain to scan", "")
 .action(async function(options){
