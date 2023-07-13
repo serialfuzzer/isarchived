@@ -33,10 +33,6 @@ cli
         cli.help()
     }
     await controller.getArchivedDomains(targets, console.log);
-    /*var deadDomains = await controller.getDeadDomains(targets);
-    deadDomains.map(function (domain){
-        console.log(domain);
-    })*/
 })
 
 
