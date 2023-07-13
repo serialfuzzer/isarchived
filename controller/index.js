@@ -15,14 +15,18 @@ Controller.prototype = {
         var template =  `http://archive.org/wayback/available?url=`;
         var archivedDomains = [];
         for(let i=0;i<urls.length;i++) {
-            var url = urls[i];
-            var requestURI = template + url;
-            var response = await axios.get(requestURI);
-            if(Object.keys(response.data.archived_snapshots).length > 0){
-                archivedDomains.push(url);
-                if(callback != undefined){
-                    callback(url) // pass the archived URL callback fn in case you don't want to wait for the entire operation to compelte
+            try {
+                var url = urls[i];
+                var requestURI = template + url;
+                var response = await axios.get(requestURI);
+                if(Object.keys(response.data.archived_snapshots).length > 0){
+                    archivedDomains.push(url);
+                    if(callback != undefined){
+                        callback(url) // pass the archived URL callback fn in case you don't want to wait for the entire operation to compelte
+                    }
                 }
+            }catch {
+
             }
             
         }
