@@ -19,7 +19,7 @@ take a list of URLs and only output the ones that are archived by wayback machin
 
 ### Another way
 
-1. `$ sudo npm install -g isarchived`
+
 
 ## Usage 
 1. `$ cat URLs | isarchived`
